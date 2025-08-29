@@ -6,19 +6,19 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// Middleware - CORS configuration
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// MongoDB Connection (we'll use MongoDB Atlas cloud database)
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/puma-travel', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB connected successfully'))
-.catch(err => console.error('MongoDB connection error:', err));
+// MongoDB Connection (temporarily commented out until IP is whitelisted)
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/puma-travel')
+// .then(() => console.log('MongoDB connected successfully'))
+// .catch(err => console.error('MongoDB connection error:', err));
 
 // Basic route for testing
 app.get('/api/health', (req, res) => {

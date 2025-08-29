@@ -15,7 +15,8 @@ const Services = () => {
         'Multi-airline options',
         'Easy rescheduling'
       ],
-      image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=400'
+      image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=400',
+      link: '/services/air-ticketing'
     },
     {
       id: 2,
@@ -28,7 +29,8 @@ const Services = () => {
         'Free cancellation options',
         'Local insights'
       ],
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=400'
+      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=400',
+      link: '/services/hotel-booking'
     },
     {
       id: 3,
@@ -41,7 +43,8 @@ const Services = () => {
         'Status tracking',
         'Expert consultation'
       ],
-      image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400'
+      image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400',
+      link: '/services/visa-assistance'
     },
     {
       id: 4,
@@ -54,7 +57,8 @@ const Services = () => {
         'Baggage protection',
         '24/7 emergency support'
       ],
-      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=400'
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=400',
+      link: '/services/travel-insurance'
     },
     {
       id: 5,
@@ -67,7 +71,8 @@ const Services = () => {
         'Transportation arrangements',
         'Experienced group leaders'
       ],
-      image: 'https://images.unsplash.com/photo-1547996160-81dfa11a4a2c?auto=format&fit=crop&q=80&w=400'
+      image: 'https://images.unsplash.com/photo-1547996160-81dfa11a4a2c?auto=format&fit=crop&q=80&w=400',
+      link: '/services/hajj-umrah'
     },
     {
       id: 6,
@@ -80,7 +85,8 @@ const Services = () => {
         'All-inclusive options',
         '24/7 support during tour'
       ],
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=400'
+      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=400',
+      link: '/tour-packages'
     }
   ];
 
@@ -116,8 +122,8 @@ const Services = () => {
                     ))}
                   </ul>
                   <div className="service-actions">
-                    <Link to="/contact" className="btn btn-primary">Get Quote</Link>
-                    <Link to="/contact" className="btn btn-outline">Learn More</Link>
+                    <Link to={service.link} className="btn btn-primary">Learn More</Link>
+                    <Link to="/contact" className="btn btn-outline">Get Quote</Link>
                   </div>
                 </div>
               </div>
